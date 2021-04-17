@@ -1,5 +1,5 @@
 import javax.swing.JComponent
 
-interface Control {
+interface HasMainElement {
     val mainElement: JComponent
 }
