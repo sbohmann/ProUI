@@ -1,11 +1,10 @@
-import java.util.function.Consumer
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 
 class Application {
-    fun run(initialize: Consumer<Application>) {
+    fun run(initialize: (Application) -> Unit) {
         SwingUtilities.invokeAndWait {
-            initialize.accept(this)
+            initialize(this)
         }
     }
 
